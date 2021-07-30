@@ -1,0 +1,22 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+.main_div{
+    height: 500;
+    width: 100%;
+    border-style: solid;
+    display: flex;
+}
+
+
+
+.right_cont{
+background-color: aquamarine;
+}
+
+.left_cont{
+background-color:beige;
+}

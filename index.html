@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>District's Blogs</title>
+</head>
+<body>
+
+    <!--HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+    <img src="agile.jpeg" height="100" width="100"/>
+          <a class="navbar-brand mx-3" href="#">District's Blogs</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav ">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!--CAROUSEL-->
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="banner.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="banner2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="banner3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+
+
+<div class="main_div">
+
+  <div class="left_cont">
+<table border="1" height=500 width=500>
+<tr>
+
+  <td>
+
+    <p id="form_data1">
+
+
+    </p>
+    <p id="form_data2">
+
+
+    </p>
+  </td>
+</tr>
+
+</table>
+  </div>
+
+  <div class="right_cont">
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input  id="myInput" type="text" class="form-control"  aria-describedby="emailHelp">
+        <script>
+          function getInputValue(){
+              var titleVal = document.getElementById("myInput").value;
+              var DescVal = document.getElementById("w3review").value;
+             
+
+            localStorage.setItem('newtitleVal',titleVal);
+            localStorage.setItem('newDescVal',DescVal);
+            
+
+            
+            document.getElementById("form_data2").innerHTML = localStorage.getItem("newtitleVal");
+            document.getElementById("form_data1").innerHTML = localStorage.getItem("newDescVal");
+
+
+
+              // Displaying the value
+
+              // alert(DescVal);
+              // prompt(titleVal);
+          };
+
+         
+            
+
+           
+
+        
+      </script>
+
+
+      </div>
+      <label for="w3review">Description</label>
+      <br>
+      <textarea id="w3review" name="w3review" rows="10" cols="100">
+     </textarea>
+     <br>
+      <button  onclick="getInputValue();"type="button" class="btn btn-primary">CREATE YOUR BLOG NOW</button>
+    </form>
+
+  </div>
+</div>
+
+<!--CARDS-->
+<div class="d-flex mt-3 justify-content-around" >
+      <div class="card " style="width: 18rem;">
+        <img src="agile.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="agile.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="agile.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="d-flex mt-3 justify-content-around">
+        <div class="card " style="width: 18rem;">
+          <img src="agile.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="agile.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <img src="agile.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+      <!-- Footer -->
+<footer class="page-footer font-small blue pt-4 bg-light mt-3">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase">District Blogs</h5>
+          <p>Write & Share Your Views With Us</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3 ">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled ">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="https://agiledistrict.com/"> agiledistrict.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</body>
+</html>
